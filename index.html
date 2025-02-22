@@ -1,219 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Boxes</title>
-    <link rel="stylesheet" href="index.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Boxes</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+  <div class="outerdiv">
+    <div class="top-div">YAY! It’s BOGO</div>
 
-    <div class="outerdiv">
-        <div class="top-div">
-            YAY! It’s BOGO
+    <!-- Box 1 -->
+    <div class="box" id="box1">
+      <div class="box-content" onclick="toggleBox('box1', 10)">
+        <div class="box-section">
+          <input type="radio" name="box-option" onclick="selectBox(event, 'box1', 10)" />
         </div>
-
-        <!-- Box 1 -->
-        <div class="box" id="box1">
-            <div class="box-content" onclick="toggleBox('box1', 10)">
-                <div class="box-section">
-                    <input type="radio" name="box-option" onclick="selectBox(event, 'box1', 10)">
-                </div>
-                <div class="box-section">
-                    <p class="unit-text"><b>1 Unit</b> <span class="discount">10% off</span></p>
-                    <p>Standard Price</p>
-                </div>
-                <div class="box-section">
-                    <p class="price-bold">$10.00 USD</p>
-                    <p class="price-strike"><s>$24.00 USD</s></p>
-                </div>
-            </div>
-            <div class="options">
-                <div class="options-container">
-                    <div class="option-column">
-                        <label class="option-heading">Size</label>
-                        <div class="dropdown-row">
-                            <span>#1</span>
-                            <select>
-                                <option>Size</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                        <div class="dropdown-row">
-                            <span>#2</span>
-                            <select>
-                                <option>Size</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="option-column">
-                        <label class="option-heading">Color</label>
-                        <div class="dropdown-row">
-                            <select>
-                                <option>Color</option>
-                                <option>Red</option>
-                                <option>Blue</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
-                        <div class="dropdown-row">
-                            <select>
-                                <option>Color</option>
-                                <option>Red</option>
-                                <option>Blue</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="box-section">
+          <p class="unit-text"><b>1 Unit</b> <span class="discount">10% off</span></p>
+          <p>Standard Price</p>
         </div>
-
-        <!-- Box 2 -->
-        <div class="box" id="box2">
-            <div class="box-content" onclick="toggleBox('box2', 18)">
-                <div class="box-section">
-                    <input type="radio" name="box-option" onclick="selectBox(event, 'box2', 18)">
-                </div>
-                <div class="box-section">
-                    <p class="unit-text"><b>2 Units</b> <span class="discount">20% off</span></p>
-                </div>
-                <div class="box-section">
-                    <p class="price-bold">$18.00 USD</p>
-                    <p class="price-strike"><s>$36.00 USD</s></p>
-                </div>
-            </div>
-            <div class="options">
-                <div class="options-container">
-                    <div class="option-column">
-                        <label class="option-heading">Size</label>
-                        <div class="dropdown-row">
-                            <span>#1</span>
-                            <select>
-                                <option>Size</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                        <div class="dropdown-row">
-                            <span>#2</span>
-                            <select>
-                                <option>Size</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="option-column">
-                        <label class="option-heading">Color</label>
-                        <div class="dropdown-row">
-                            <select>
-                                <option>Color</option>
-                                <option>Red</option>
-                                <option>Blue</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
-                        <div class="dropdown-row">
-                            <select>
-                                <option>Color</option>
-                                <option>Red</option>
-                                <option>Blue</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="box-section">
+          <p class="price-bold">$10.00 USD</p>
+          <p class="price-strike"><s>$24.00 USD</s></p>
         </div>
-
-        <!-- Box 3 -->
-        <div class="box" id="box3">
-            <div class="box-content" onclick="toggleBox('box3', 24)">
-                <div class="box-section">
-                    <input type="radio" name="box-option" onclick="selectBox(event, 'box3', 24)">
-                </div>
-                <div class="box-section">
-                    <p class="unit-text"><b>3 Units</b> <span class="discount">30% off</span></p>
-                </div>
-                <div class="box-section">
-                    <p class="price-bold">$24.00 USD</p>
-                    <p class="price-strike"><s>$48.00 USD</s></p>
-                </div>
+      </div>
+      <div class="options">
+        <div class="options-container">
+          <div class="option-column">
+            <label class="option-heading">Size</label>
+            <div class="dropdown-row">
+              <span>#1</span>
+              <select>
+                <option>Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
             </div>
-                <div class="options">
-                <div class="options-container">
-                    <div class="option-column">
-                        <label class="option-heading">Size</label>
-                        <div class="dropdown-row">
-                            <span>#1</span>
-                            <select>
-                                <option>Size</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                        <div class="dropdown-row">
-                            <span>#2</span>
-                            <select>
-                                <option>Size</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="option-column">
-                        <label class="option-heading">Color</label>
-                        <div class="dropdown-row">
-                            <select>
-                                <option>Color</option>
-                                <option>Red</option>
-                                <option>Blue</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
-                        <div class="dropdown-row">
-                            <select>
-                                <option>Color</option>
-                                <option>Red</option>
-                                <option>Blue</option>
-                                <option>Green</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="dropdown-row">
+              <span>#2</span>
+              <select>
+                <option>Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
             </div>
+          </div>
+          <div class="option-column">
+            <label class="option-heading">Color</label>
+            <div class="dropdown-row">
+              <select>
+                <option>Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+            </div>
+            <div class="dropdown-row">
+              <select>
+                <option>Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+            </div>
+          </div>
         </div>
-
-        <!-- Bottom section -->
-        <div class="bottom-section">
-            <div class="row">
-                <a href="#" class="free-delivery">Free Delivery</a>
-                <div class="total-price">Total: $<span id="totalPrice">0.00</span> USD</div>
-            </div>
-            <div class="row">
-                <button class="add-to-cart">+ Add to Cart 🛒</button>
-            </div>
-            <div class="row" style="display: flex; justify-content: flex-end; align-items: center;">
-                @ Powered by Pumper
-              </div>
-              
-        </div>
-
+      </div>
     </div>
 
-    <script src="index.js"></script>
+    <!-- Box 2 -->
+    <div class="box" id="box2">
+      <div class="box-content" onclick="toggleBox('box2', 18)">
+        <div class="box-section">
+          <input type="radio" name="box-option" onclick="selectBox(event, 'box2', 18)" />
+        </div>
+        <div class="box-section">
+          <p class="unit-text"><b>2 Units</b> <span class="discount">20% off</span></p>
+        </div>
+        <div class="box-section">
+          <p class="price-bold">$18.00 USD</p>
+          <p class="price-strike"><s>$36.00 USD</s></p>
+        </div>
+      </div>
+      <div class="options">
+        <div class="options-container">
+          <div class="option-column">
+            <label class="option-heading">Size</label>
+            <div class="dropdown-row">
+              <span>#1</span>
+              <select>
+                <option>Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+            <div class="dropdown-row">
+              <span>#2</span>
+              <select>
+                <option>Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+          </div>
+          <div class="option-column">
+            <label class="option-heading">Color</label>
+            <div class="dropdown-row">
+              <select>
+                <option>Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+            </div>
+            <div class="dropdown-row">
+              <select>
+                <option>Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="box" id="box3">
+      <div class="box-content" onclick="toggleBox('box3', 24)">
+        <div class="box-section">
+          <input type="radio" name="box-option" onclick="selectBox(event, 'box3', 24)" />
+        </div>
+        <div class="box-section">
+          <p class="unit-text"><b>3 Units</b> <span class="discount">30% off</span></p>
+        </div>
+        <div class="box-section">
+          <p class="price-bold">$24.00 USD</p>
+          <p class="price-strike"><s>$48.00 USD</s></p>
+        </div>
+      </div>
+      <div class="options">
+        <div class="options-container">
+          <div class="option-column">
+            <label class="option-heading">Size</label>
+            <div class="dropdown-row">
+              <span>#1</span>
+              <select>
+                <option>Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+            <div class="dropdown-row">
+              <span>#2</span>
+              <select>
+                <option>Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+          </div>
+          <div class="option-column">
+            <label class="option-heading">Color</label>
+            <div class="dropdown-row">
+              <select>
+                <option>Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+            </div>
+            <div class="dropdown-row">
+              <select>
+                <option>Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom section -->
+    <div class="bottom-section">
+      <div class="row">
+        <a href="#" class="free-delivery">Free Delivery</a>
+        <div class="total-price">Total: $<span id="totalPrice">0.00</span> USD</div>
+      </div>
+      <div class="row">
+        <button class="add-to-cart">+ Add to Cart 🛒</button>
+      </div>
+      <div class="row" style="justify-content: flex-end; align-items: center;">
+        @ Powered by Pumper
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
